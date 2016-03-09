@@ -1,0 +1,41 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{Thibault \bsc{BEZIERS LA FOSSE}}
+\date{}
+
+
+\begin{document}
+\tableofcontents
+\section{Greedy-VC}
+\subsection{Algorithme}
+
+\noindent Entrée: $Graphe G = (V, E)$ \\
+$V' := \emptyset $\\
+Tant que $E \neq \emptyset$ \\
+\begin{itemize}
+\item Choisir une arête ${u, v} \in E$ \\
+\item $V' := V' \cup {u} \cup {v}$ \\
+\item $E' :=$ arêtes incidentes à $u$ et$ v$ \\
+\item $E := E - E'$ \\
+\end{itemize}
+Choisir une arête ${u, v} \in E$ \\
+
+
+
+\section{IPL-VC}
+\subsection{Algorithme}
+
+\section{Kernel-VC}
+\subsection{Algorithme}
+
+\section{ARB-VC}
+\subsection{Algorithme}
+
+\end{document}

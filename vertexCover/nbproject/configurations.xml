@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>ARBVC.h</itemPath>
+      <itemPath>Graph.h</itemPath>
+      <itemPath>GreedyVC.h</itemPath>
+      <itemPath>IPLVC.h</itemPath>
+      <itemPath>KernelVC.h</itemPath>
+      <itemPath>MatrixGraph.h</itemPath>
+      <itemPath>SetGraph.h</itemPath>
+      <itemPath>VC.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>ARBVC.cpp</itemPath>
+      <itemPath>Graph.cpp</itemPath>
+      <itemPath>GreedyVC.cpp</itemPath>
+      <itemPath>IPLVC.cpp</itemPath>
+      <itemPath>KernelVC.cpp</itemPath>
+      <itemPath>MatrixGraph.cpp</itemPath>
+      <itemPath>SetGraph.cpp</itemPath>
+      <itemPath>VC.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandLine>-std=c++11</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="ARBVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ARBVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Graph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Graph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IPLVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IPLVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KernelVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KernelVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrixGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SetGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SetGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="ARBVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ARBVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Graph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Graph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IPLVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IPLVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KernelVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KernelVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrixGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrixGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SetGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SetGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
