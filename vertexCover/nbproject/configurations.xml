@@ -4,14 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>ARBVC.h</itemPath>
-      <itemPath>Graph.h</itemPath>
-      <itemPath>GreedyVC.h</itemPath>
-      <itemPath>IPLVC.h</itemPath>
-      <itemPath>KernelVC.h</itemPath>
-      <itemPath>MatrixGraph.h</itemPath>
-      <itemPath>SetGraph.h</itemPath>
-      <itemPath>VC.h</itemPath>
+      <itemPath>AdjacencyList.h</itemPath>
+      <itemPath>VertexCoverAbstractStruct.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -20,14 +14,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ARBVC.cpp</itemPath>
-      <itemPath>Graph.cpp</itemPath>
-      <itemPath>GreedyVC.cpp</itemPath>
-      <itemPath>IPLVC.cpp</itemPath>
-      <itemPath>KernelVC.cpp</itemPath>
-      <itemPath>MatrixGraph.cpp</itemPath>
-      <itemPath>SetGraph.cpp</itemPath>
-      <itemPath>VC.cpp</itemPath>
+      <itemPath>AdjacencyList.cpp</itemPath>
+      <itemPath>VertexCoverAbstractStruct.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -55,37 +43,13 @@
           <commandLine>-std=c++11</commandLine>
         </ccTool>
       </compileType>
-      <item path="ARBVC.cpp" ex="false" tool="1" flavor2="0">
+      <item path="AdjacencyList.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ARBVC.h" ex="false" tool="3" flavor2="0">
+      <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Graph.cpp" ex="false" tool="1" flavor2="0">
+      <item path="VertexCoverAbstractStruct.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Graph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="IPLVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="IPLVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="KernelVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="KernelVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MatrixGraph.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="MatrixGraph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="SetGraph.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="SetGraph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="VC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="VC.h" ex="false" tool="3" flavor2="0">
+      <item path="VertexCoverAbstractStruct.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -110,37 +74,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="ARBVC.cpp" ex="false" tool="1" flavor2="0">
+      <item path="AdjacencyList.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ARBVC.h" ex="false" tool="3" flavor2="0">
+      <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Graph.cpp" ex="false" tool="1" flavor2="0">
+      <item path="VertexCoverAbstractStruct.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Graph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="IPLVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="IPLVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="KernelVC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="KernelVC.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MatrixGraph.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="MatrixGraph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="SetGraph.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="SetGraph.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="VC.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="VC.h" ex="false" tool="3" flavor2="0">
+      <item path="VertexCoverAbstractStruct.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

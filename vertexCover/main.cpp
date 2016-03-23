@@ -2,20 +2,25 @@
  * File:   main.cpp
  * Author: E104607D
  *
- * Created on 9 mars 2016, 09:33
+ * Created on 23 mars 2016, 09:34
  */
 
 #include <cstdlib>
-#include "SetGraph.h"
+
+#include "VertexCoverAbstractStruct.h"
+#include "AdjacencyList.h"
+
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    SetGraph *g = new SetGraph(5, 5);
-    g -> generateEdges();
-    g -> drawGraph();
+    int sz = 5;
+    VertexCoverAbstractStruct* v = new AdjacencyList(sz);
+    v->displayGraph();
+    v->generateEdges(50);
+    v->displayGraph();
     return 0;
 }
 

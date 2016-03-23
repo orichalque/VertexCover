@@ -35,14 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/ARBVC.o \
-	${OBJECTDIR}/Graph.o \
-	${OBJECTDIR}/GreedyVC.o \
-	${OBJECTDIR}/IPLVC.o \
-	${OBJECTDIR}/KernelVC.o \
-	${OBJECTDIR}/MatrixGraph.o \
-	${OBJECTDIR}/SetGraph.o \
-	${OBJECTDIR}/VC.o \
+	${OBJECTDIR}/AdjacencyList.o \
+	${OBJECTDIR}/VertexCoverAbstractStruct.o \
 	${OBJECTDIR}/main.o
 
 
@@ -70,45 +64,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vertexcover: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vertexcover ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/ARBVC.o: ARBVC.cpp 
+${OBJECTDIR}/AdjacencyList.o: AdjacencyList.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ARBVC.o ARBVC.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AdjacencyList.o AdjacencyList.cpp
 
-${OBJECTDIR}/Graph.o: Graph.cpp 
+${OBJECTDIR}/VertexCoverAbstractStruct.o: VertexCoverAbstractStruct.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Graph.o Graph.cpp
-
-${OBJECTDIR}/GreedyVC.o: GreedyVC.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GreedyVC.o GreedyVC.cpp
-
-${OBJECTDIR}/IPLVC.o: IPLVC.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IPLVC.o IPLVC.cpp
-
-${OBJECTDIR}/KernelVC.o: KernelVC.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KernelVC.o KernelVC.cpp
-
-${OBJECTDIR}/MatrixGraph.o: MatrixGraph.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MatrixGraph.o MatrixGraph.cpp
-
-${OBJECTDIR}/SetGraph.o: SetGraph.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SetGraph.o SetGraph.cpp
-
-${OBJECTDIR}/VC.o: VC.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VC.o VC.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VertexCoverAbstractStruct.o VertexCoverAbstractStruct.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
