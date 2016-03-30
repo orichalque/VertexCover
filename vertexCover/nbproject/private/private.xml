@@ -7,11 +7,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/GreedyVC.h</file>
             <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/VertexCoverAbstractStruct.h</file>
             <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/AdjacencyList.cpp</file>
-            <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/VertexCoverAbstractStruct.cpp</file>
             <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/main.cpp</file>
+            <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/GreedyVC.cpp</file>
             <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/AdjacencyList.h</file>
+            <file>file:/comptes/E104607D/Desktop/vertexCover/vertexCover/VertexCoverAbstract.h</file>
         </group>
     </open-files>
 </project-private>

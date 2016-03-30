@@ -14,16 +14,6 @@
 #include <algorithm>
 #include "VertexCoverAbstractStruct.h"
 
-struct Vertex{
-    int num;
-    std::vector< Vertex* > adjacentVertex;
-};
-
-struct Edge{
-    int debut;
-    int fin;
-};
-
 class AdjacencyList : public VertexCoverAbstractStruct {
 public:
     /**
@@ -50,6 +40,9 @@ public:
      * @brief Display the graph as : Vertex ---> its adjacent vertexes
      */
     void displayGraph();
+    
+    void displayEdges();
+    
     /**
      * @brief Add a Vertex
      * @param i the vertex number to add
@@ -76,10 +69,17 @@ public:
     bool createEdge(Edge e);
     
     bool generateEdges(int numberOfEdges);
+    
+    std::vector<Vertex> getGraph() const {
+        return graph;
+    }
+
+
+    std::vector<Edge>* getEdges();
+
             
 protected:        
     std::vector<Vertex> graph;
-    std::vector<Edge> edges;
 
 private:
 

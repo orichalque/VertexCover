@@ -9,6 +9,8 @@
 
 #include "VertexCoverAbstractStruct.h"
 #include "AdjacencyList.h"
+#include "VertexCoverAbstract.h"
+#include "GreedyVC.h"
 
 using namespace std;
 
@@ -16,11 +18,17 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    int sz = 5;
-    VertexCoverAbstractStruct* v = new AdjacencyList(sz);
+    int sz = 9;
+    AdjacencyList* v = new AdjacencyList(sz);
     v->displayGraph();
-    v->generateEdges(50);
+    v->generateEdges(10);
     v->displayGraph();
+    
+    VertexCoverAbstract* vc = new GreedyVC();
+    
+    cout << "START " << endl;
+    vc->calculate(*v);
+    
     return 0;
 }
 

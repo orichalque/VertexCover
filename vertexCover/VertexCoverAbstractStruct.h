@@ -7,6 +7,26 @@
 
 #ifndef VERTEXCOVERABSTRACTSTRUCT_H
 #define	VERTEXCOVERABSTRACTSTRUCT_H
+#include <vector>
+
+struct Edge{
+    int debut;
+    int fin;
+    
+    bool operator==(Edge e) const{
+        if ((e.debut == debut && e.fin == fin) || (e.debut == fin && e.fin == debut)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+};
+
+struct Vertex{
+    int num;
+    std::vector< Vertex* > adjacentVertex;
+};
 
 class VertexCoverAbstractStruct {
 public:
@@ -19,8 +39,11 @@ public:
     virtual void displayGraph() = 0;
     virtual bool removeEdge(int i, int j) = 0;
     virtual bool generateEdges(int numberOfEdges) = 0;
-private:
+    
+//    virtual std::vector<Edge> getEdges() = 0;
 
+protected:    
+    std::vector<Edge> edges;
 };
 
 #endif	/* VERTEXCOVERABSTRACTSTRUCT_H */

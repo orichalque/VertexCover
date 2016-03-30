@@ -36,6 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/AdjacencyList.o \
+	${OBJECTDIR}/GreedyVC.o \
+	${OBJECTDIR}/VertexCoverAbstract.o \
 	${OBJECTDIR}/VertexCoverAbstractStruct.o \
 	${OBJECTDIR}/main.o
 
@@ -68,6 +70,16 @@ ${OBJECTDIR}/AdjacencyList.o: AdjacencyList.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AdjacencyList.o AdjacencyList.cpp
+
+${OBJECTDIR}/GreedyVC.o: GreedyVC.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GreedyVC.o GreedyVC.cpp
+
+${OBJECTDIR}/VertexCoverAbstract.o: VertexCoverAbstract.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VertexCoverAbstract.o VertexCoverAbstract.cpp
 
 ${OBJECTDIR}/VertexCoverAbstractStruct.o: VertexCoverAbstractStruct.cpp 
 	${MKDIR} -p ${OBJECTDIR}

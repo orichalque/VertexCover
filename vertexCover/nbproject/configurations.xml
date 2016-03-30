@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>AdjacencyList.h</itemPath>
+      <itemPath>GreedyVC.h</itemPath>
+      <itemPath>VertexCoverAbstract.h</itemPath>
       <itemPath>VertexCoverAbstractStruct.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -15,6 +17,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>AdjacencyList.cpp</itemPath>
+      <itemPath>GreedyVC.cpp</itemPath>
+      <itemPath>VertexCoverAbstract.cpp</itemPath>
       <itemPath>VertexCoverAbstractStruct.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -47,6 +51,14 @@
       </item>
       <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VertexCoverAbstract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VertexCoverAbstract.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="VertexCoverAbstractStruct.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VertexCoverAbstractStruct.h" ex="false" tool="3" flavor2="0">
@@ -77,6 +89,14 @@
       <item path="AdjacencyList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GreedyVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GreedyVC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VertexCoverAbstract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VertexCoverAbstract.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VertexCoverAbstractStruct.cpp" ex="false" tool="1" flavor2="0">
       </item>

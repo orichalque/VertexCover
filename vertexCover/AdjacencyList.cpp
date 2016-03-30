@@ -15,7 +15,7 @@ AdjacencyList::AdjacencyList(int size) {
     for (int i = 0; i < size; ++i) {
         Vertex v;
         v.num = i;
-        graph.push_back(v);
+        graph.push_back(v);        
     }
 }
 
@@ -35,6 +35,13 @@ void AdjacencyList::displayGraph() {
             cout << j -> num << " ";
         }
         cout << " " << endl;
+    }
+}
+
+void AdjacencyList::displayEdges() {
+    cout << "Affichage des arêtes" << endl;
+    for (auto it : edges){
+        cout << it.debut << " - " << it.fin << endl;
     }
 }
 
@@ -110,6 +117,10 @@ bool AdjacencyList::removeEdge(int i, int j) {
     return true;
 }
 
+std::vector<Edge>* AdjacencyList::getEdges() {
+    return &edges;
+}
+
 bool AdjacencyList::generateEdges(int numberOfEdges) {
     //Max of edge=n*(n-1)/2
     int n = graph.size();
@@ -123,8 +134,9 @@ bool AdjacencyList::generateEdges(int numberOfEdges) {
     for (auto it: graph){
         availableStart.push_back(it.num);
     }
-    int initialNode = 0; //RANDOMLY CHOSEN TODO
-    int destinationNode;
+    
+    int initialNode; //Starting node of the edge
+    int destinationNode; //Finishing node of the edge 
     
     
     random_device r;
@@ -134,12 +146,13 @@ bool AdjacencyList::generateEdges(int numberOfEdges) {
     //Each iteration add an edge
     //Bad Complexity : (-)(numberOfEdges * V * E)
     uid = new uniform_int_distribution<int>(0, graph.size()-1);
-    initialNode = uid->operator ()(e1);
-    delete uid;
-    
-    for (int i = 0; i < numberOfEdges; ++i){
+    initialNode = uid->operator ()(e1); //Randomly choose a starting node
+    int i = 0;
+    while (i < numberOfEdges && availableStart.size()>0){
         //Creation of the possible destination vector
-        availableDestinations.clear();
+        if (availableDestinations.size()>0)
+            availableDestinations.clear();
+        
         for (auto&& it : graph){
             if ((it.num != graph.at(availableStart.at(initialNode)).num) &&
                    (find(graph.at(availableStart.at(initialNode)).adjacentVertex.begin(), 
@@ -147,24 +160,29 @@ bool AdjacencyList::generateEdges(int numberOfEdges) {
                             &it) == graph.at(availableStart.at(initialNode)).adjacentVertex.end())){
             
                 //Removing the vertex and all its existiong edges from the destination possible vertex
-                availableDestinations.push_back(it.num);                
+                availableDestinations.push_back(it.num);      
             }                                               
         }
         
         uid = new uniform_int_distribution<int>(0, availableDestinations.size()-1);
         destinationNode = uid->operator ()(e1);
-        delete uid;
+
         
 
-        createEdge(graph.at(availableStart.at(initialNode)).num, availableDestinations.at(destinationNode));
-        
+        //createEdge(graph.at(availableStart.at(initialNode)).num, availableDestinations.at(destinationNode));
+        createEdge(graph.at(availableStart.at(initialNode)).num, graph.at(availableDestinations.at(destinationNode)).num);
         displayGraph();
         
-        if (graph.at(availableStart.at(initialNode)).adjacentVertex.size() == graph.size()-1){
+        if (graph.at(availableStart.at(initialNode)).adjacentVertex.size() >= graph.size()-1){
             //The vertex cant have other edges, so we take it out of the available starts
-            cout << "WE REMOVE THE NODE" << endl;
             availableStart.erase(
                     find(availableStart.begin(), availableStart.end(), graph.at(availableStart.at(initialNode)).num));
+        }
+        
+        if (graph.at(availableDestinations.at(destinationNode)).adjacentVertex.size() >= graph.size()-1){
+            //The vertex cant have other edges, so we take it out of the available starts
+            availableStart.erase(
+                    find(availableStart.begin(), availableStart.end(), graph.at(availableDestinations.at(destinationNode)).num));
         }
         
         cout << "availableStart: " ;
@@ -173,12 +191,18 @@ bool AdjacencyList::generateEdges(int numberOfEdges) {
         }
         
         cout << endl;
+        
         uid = new uniform_int_distribution<int>(0, availableStart.size()-1);
         initialNode = uid->operator ()(e1);
-        delete uid;
+        cout << "Starting node: " << initialNode << endl;
+        ++i;
     }
+    
+    delete uid;
     return true;
 }
+
+
 
 
 
