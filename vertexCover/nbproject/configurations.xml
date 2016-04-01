@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AVC.h</itemPath>
       <itemPath>AdjacencyList.h</itemPath>
       <itemPath>GreedyVC.h</itemPath>
       <itemPath>VertexCoverAbstract.h</itemPath>
@@ -16,6 +17,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>AVC.cpp</itemPath>
       <itemPath>AdjacencyList.cpp</itemPath>
       <itemPath>GreedyVC.cpp</itemPath>
       <itemPath>VertexCoverAbstract.cpp</itemPath>
@@ -47,6 +49,10 @@
           <commandLine>-std=c++11</commandLine>
         </ccTool>
       </compileType>
+      <item path="AVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AVC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AdjacencyList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">
@@ -86,6 +92,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AVC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AVC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AdjacencyList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AdjacencyList.h" ex="false" tool="3" flavor2="0">

@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AVC.o \
 	${OBJECTDIR}/AdjacencyList.o \
 	${OBJECTDIR}/GreedyVC.o \
 	${OBJECTDIR}/VertexCoverAbstract.o \
@@ -65,6 +66,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vertexcover: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vertexcover ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/AVC.o: AVC.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AVC.o AVC.cpp
 
 ${OBJECTDIR}/AdjacencyList.o: AdjacencyList.cpp 
 	${MKDIR} -p ${OBJECTDIR}

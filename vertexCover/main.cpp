@@ -18,10 +18,10 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    int sz = 9;
+    int sz = 35;
     AdjacencyList* v = new AdjacencyList(sz);
     v->displayGraph();
-    v->generateEdges(10);
+    v->generateEdges(85);
     v->displayGraph();
     
     VertexCoverAbstract* vc = new GreedyVC();

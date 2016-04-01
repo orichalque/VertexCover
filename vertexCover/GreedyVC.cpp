@@ -18,7 +18,7 @@ GreedyVC::~GreedyVC() {
 }
 
 std::vector<Vertex*> GreedyVC::calculate(AdjacencyList& graph) {
-    vector<Vertex*> VC;
+    vector<int> VC;
     cout << "Step 1" << endl;
     vector<Edge> E; //copy graphe edges;
     
@@ -47,8 +47,8 @@ std::vector<Vertex*> GreedyVC::calculate(AdjacencyList& graph) {
         
         cout << "Edge: " << currentEdge.debut << " - " << currentEdge.fin << endl;
         //Ajout des deux vertex de l'arete au VC
-        VC.push_back(&graph.getGraph().at(currentEdge.debut));
-        VC.push_back(&graph.getGraph().at(currentEdge.fin));
+        VC.push_back(currentEdge.debut);
+        VC.push_back(currentEdge.fin);
         
         cout << "Step 3 : Vertex adjacent a u" << endl;
         
@@ -61,6 +61,7 @@ std::vector<Vertex*> GreedyVC::calculate(AdjacencyList& graph) {
             }    
         }
         
+        
         cout << "Step 4 : Vertex adjacent a v" << endl;
         for (int i = 0; i < graph.getGraph()[currentEdge.fin].adjacentVertex.size(); ++i){
             Edge edgeCovered;
@@ -71,7 +72,9 @@ std::vector<Vertex*> GreedyVC::calculate(AdjacencyList& graph) {
             }    
         }
         
+        
         E.erase(E.begin()+pos);
+        
         
         cout << "Step 5 : Suppression de E' " << endl;
         for (auto edgeToRemove : E2){
@@ -82,18 +85,21 @@ std::vector<Vertex*> GreedyVC::calculate(AdjacencyList& graph) {
         }
         
         E2.clear();               
-        
         //pick edges in E
         //V' += E.vertex
         //E' = Aretes incidentes au vertex de E
         //E -= E'
     }
     
+    vector<Vertex*> vcToReturn;
+    cout << VC.size() << " solutions trouvées pour Vertex Cover: " << endl;
+    
     for (auto v : VC){
-        cout << v->num << " ";        
+        cout << graph.getGraph().at(v).num << " ";   
+        vcToReturn.push_back(&graph.getGraph().at(v));
     }
     cout << endl;
-    return VC;
+    return vcToReturn;
     
 }
 

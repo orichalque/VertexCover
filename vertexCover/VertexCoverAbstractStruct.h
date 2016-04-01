@@ -21,6 +21,17 @@ struct Edge{
         }
     }
     
+    Edge& operator=(const Edge& right) {
+        // Check for self-assignment!
+        if (this == &right) // Same object?
+            return *this; // Yes, so skip assignment, and just return *this.
+        
+        debut = right.debut;
+        fin = right.fin;
+        return *this;
+    }
+
+    
 };
 
 struct Vertex{
